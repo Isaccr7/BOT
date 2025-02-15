@@ -30,12 +30,12 @@ export default{
 
             // verificamos a que platafoma corresponde 
 
-            // if(platform==="telegram"){
-            //     await sendToTelegram(chatId,messages);
-            // }
-            // else{
-            //     return new Response("Esta plataforma no esta disponible",{status:400});
-            // }
+            if(platform==="telegram"){
+                await sendToTelegram(chatId,messages);
+            }
+            else{
+                return new Response("Esta plataforma no esta disponible",{status:400});
+            }
             /*responder*/
 
             return new Response(`Mensaje Enviado ${messages}`,{status:200});
