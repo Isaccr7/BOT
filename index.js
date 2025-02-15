@@ -30,7 +30,7 @@ export default{
 
             // verificamos a que platafoma corresponde 
 
-            if(platform==="telegram"){
+            if(platform=="telegram"){
                 await sendToTelegram(chatId,messages);
             }
             else{
