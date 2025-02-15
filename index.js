@@ -14,19 +14,19 @@ export default{
 
             // verifica,ps de donde viene la peticion
 
-            /* if(data.messages){
-            //     platform="telegram";
-            //     chatId=data.messages.chat.id;
-            //     messages=data.messages.text||"";
-            // }
+         /*   if(data.messages){
+                platform="telegram";
+                chatId=data.messages.chat.id;
+                messages=data.messages.text||"";
+            } */
 
-            // // si es de la api
-            // else{ */
+            // si es de la api
+       /*     else{ */
                 platform=data.platform;
                 chatId=data.chatId;
                 messages=data.messages;
 
-          /*  // }*/
+            /* } */
 
             // verificamos a que platafoma corresponde 
 
