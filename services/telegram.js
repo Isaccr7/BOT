@@ -1,4 +1,4 @@
-import { telegram_api, telegram_token } from "../utils/config";
+import { telegram_api} from "../utils/config";
 
 export async function sendToTelegram(chatId,messages) {
     return fetch(`${telegram_api}/sendMessage`,{
