@@ -10,7 +10,7 @@ export default{
         /*creamo un try cath */
         try{
             const data=await request.json();
-            let platform,message,chatId;
+            let platform,messages,chatId;
 
             // verifica,ps de donde viene la peticion
 
@@ -24,24 +24,24 @@ export default{
        /*     else{ */
                 platform=data.platform;
                 chatId=data.chatId;
-                message=data.messages;
+                messages=data.messages;
 
             /* } */
 
             // verificamos a que platafoma corresponde 
 
             if(platform==="telegram"){
-                await sendToTelegram(chatId,message);
+                await sendToTelegram(chatId,messages);
             }
             else{
                 return new Response("Esta plataforma no esta disponible",{status:400});
             }
             /*responder*/
 
-            return new Response(`Mensaje Enviado ${message}`,{status:200});
+            return new Response(`Mensaje Enviado ${messages}`,{status:200});
 
         }catch(error){
-            return new Response(`Algo sucedio ${error.message}`,{status:500});
+            return new Response(`Algo sucedio ${error.messages}`,{status:500});
         }
     }
 };
